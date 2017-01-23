@@ -11,4 +11,5 @@ for nucleotide in listdna:                                  #in a sense it scans
     addtocDNAlist = complement.get(nucleotide)              #the "get" function returns the value of the key within a dictionary. The values of the keys were designated as the nucelottide complement
     cDNAlist.append(addtocDNAlist)                          #addtocDNAlist is the name that I gave to the nucleotide complement that needs to be added to the empty list
 reverse_complement = ''.join(cDNAlist)                      #the nucleotide coomplement list is in the proper order and now needs to be converted to a string
-print (reverse_complement[::-1])                            #final step is it reverse the order of the sequence.[begin:end:step] by leaving begin and end as blank and the step as -1 to reverse the string
+f=open('rosalind_cDNA_output.txt','w')
+f.write(reverse_complement[::-1])                            #final step is it reverse the order of the sequence.[begin:end:step] by leaving begin and end as blank and the step as -1 to reverse the string
